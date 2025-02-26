@@ -8,7 +8,7 @@
 
 ### Step 1: Fork the GitHub Repository and Set Up a Service
 
-- Visit the GitHub repository and fork it to your account.
+- Visit the GitHub repository: https://github.com/parikshitjangid/keylogger and fork it to your account.
 - Go to [Koyeb](https://www.koyeb.com/) and create a free account.
 - Use your forked GitHub repository to create a new service.
 
